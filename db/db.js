@@ -1,7 +1,10 @@
 import { MongoClient } from "mongodb";
 
-const stringConexion =
-  "mongodb+srv://storo16:Erensnk2.021@cluster0.d8h0c.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+dotenv.config({ path: './.env' });
+
+const stringConexion = process.env.DATABASE_URL;
+
 
 const client = new MongoClient(stringConexion, {
   useNewUrlParser: true,

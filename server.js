@@ -5,7 +5,9 @@ import { conectarBD } from "./db/db.js";
 import rutasVentas from "./views/ventas.js";
 import Cors from "cors";
 
+dotenv.config({ path: './.env' });
 
+const port = process.env.PORT || 5000;
 
 const app = express();
 app.use(json());
@@ -16,12 +18,9 @@ app.use(rutasUsuario);
 app.use(rutasVentas);
 
 const main = () => {
-  const server = 
-   app.listen(5000, () => {
-    const port = server.address().port;
-    console.log(`Express is working on port ${port}`);
+  return app.listen(port, () => {
+    console.log(`escuchando puerto ${port}`);
   });
-  return server;
 };
 
 conectarBD(main);
