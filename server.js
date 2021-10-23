@@ -16,9 +16,12 @@ app.use(rutasUsuario);
 app.use(rutasVentas);
 
 const main = () => {
-  return app.listen(5000, () => {
-    console.log("escuchando puerto 5000");
+  const server = 
+   app.listen(5000, () => {
+    const port = server.address().port;
+    console.log(`Express is working on port ${port}`);
   });
+  return server;
 };
 
 conectarBD(main);
