@@ -5,6 +5,8 @@ import { conectarBD } from "./db/db.js";
 import rutasVentas from "./views/ventas.js";
 import Cors from "cors";
 
+
+
 const app = express();
 app.use(json());
 app.use(urlencoded({ extended: true }));
