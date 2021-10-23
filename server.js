@@ -4,6 +4,7 @@ import rutasUsuario from "./views/usuario.js";
 import { conectarBD } from "./db/db.js";
 import rutasVentas from "./views/ventas.js";
 import Cors from "cors";
+import dotenv from 'dotenv';
 
 dotenv.config({ path: './.env' });
 
