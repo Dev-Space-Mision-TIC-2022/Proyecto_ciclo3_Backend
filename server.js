@@ -16,7 +16,7 @@ app.use(rutasUsuario);
 app.use(rutasVentas);
 
 const main = () => {
-  return app.listen(5000, () => {
+  return app.listen(80, () => {
     console.log("escuchando puerto 5000");
   });
 };
